@@ -28,7 +28,7 @@ This project provides a Python script to monitor your public IP address and upda
 
 1. **Clone the repository:**
 
-   ```bash
+   ```
    git clone https://github.com/yourusername/duckdns-updater.git
    cd duckdns-updater
    ```
@@ -37,7 +37,7 @@ This project provides a Python script to monitor your public IP address and upda
 2. **Install dependencies:**
 
 
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
@@ -46,7 +46,7 @@ This project provides a Python script to monitor your public IP address and upda
 
 Edit the config.txt file with your DuckDNS token and domain (or simply rename the config-example.txt and edit with your info):
 
-    ```bash
+   ```
     {"apikey": "your_duckdns_token", "domain": "your_domain", "ipv4": null, "ipv6": null }
    ```
 
@@ -55,7 +55,7 @@ Edit the config.txt file with your DuckDNS token and domain (or simply rename th
 
 1. **Run the script manually:**
 
-    ```bash
+   ```
     python3 main.py
    ```
 ---
@@ -63,21 +63,21 @@ Edit the config.txt file with your DuckDNS token and domain (or simply rename th
 
 The script will attempt to set up a cron job to run every 5 minutes. If it fails due to permissions, you can manually add the following line to your crontab:
 
-    ```bash
-    */5 * * * * /usr/bin/python3 /path/to/programa.py >> /var/log/ip_updater.log 2>&1
+   ```
+    */5 * * * * /usr/bin/python3 /path/to/program.py >> /var/log/ip_updater.log 2>&1
    ```
 ---
 **Configuration**
 
 The config.txt file stores your DuckDNS token, domain, and the last known public IPs. The script updates this file whenever your IP changes.
 Example config.txt:
-```bash
+   ```
     {
-    "apikey": "12345678-90ab-cdef-1234-567890abcdef",
-    "domain": "myhome",
-    "ipv4": "123.45.67.89",
-    "ipv6": null
-}
+       "apikey": "12345678-90ab-cdef-1234-567890abcdef",
+       "domain": "myhome",
+       "ipv4": "123.45.67.89",
+       "ipv6": null
+    }
    ```
 
 **Logging**
@@ -85,7 +85,7 @@ Example config.txt:
 All script activities are logged to log.txt. The log includes timestamps and detailed messages about IP changes and update attempts.
 Example log entry:
 
-```bash
+```
 2025-10-18 12:34:56,789 - INFO - --- Start of execution: 2025-10-18 12:34:56.789123 ---
 2025-10-18 12:34:56,790 - INFO - Current IPv4: 123.45.67.89, Current IPv6: None
 2025-10-18 12:34:56,790 - INFO - Last IPv4: 123.45.67.89, Last IPv6: None
