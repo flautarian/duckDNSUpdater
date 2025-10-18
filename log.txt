@@ -1,0 +1,3 @@
+2025-10-18 12:34:08,548 - INFO - IPv4 actual: 46.6.40.65, IPv6 actual: None
+2025-10-18 12:34:08,548 - INFO - Última IPv4: 46.6.40.65, Última IPv6: None
+2025-10-18 12:34:08,548 - INFO - No IP changes, we not update DNS.

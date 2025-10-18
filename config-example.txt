@@ -1,0 +1,1 @@
+{"apikey": "duckDNSApiKey", "domain": "duckDomain", "ipv4": "46.6.40.65", "ipv6": null}
